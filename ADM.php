@@ -33,7 +33,7 @@
                         <a class="dropdown-item" href="index4.html">Pacotes</a>
                         <a class="dropdown-item" href="#">Monte sua Expedição</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Excursão</a>
+                        <a class="dropdown-item" href="#">Excursão</a>git
                     </div>
                 </li>
                 <li class="nav-item">
