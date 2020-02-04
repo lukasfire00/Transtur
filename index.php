@@ -9,21 +9,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="estilo.css" type="text/css">
 </head>
-<body style="background-color:#0080FF;">
-<h3>Gerente Login</h3>
- <fieldset>
- <legend>:::SISTEMA::::</legend>
- <form action="login.php" method="post">
- Login:
- <input type="text" name="login"
- placeholder="Digite o Login"/>
- <br><br>
- Senha:
- <input type="text" name="senha"
- placeholder="Digite a Senha"/>
- <BR><BR>
- <input type="submit" value="Entrar no Sistema"/>
- </form>
+<body>
+<div class="row">
+    <div class="col">
+      1 de 3
+    </div>
+    <div class="col">
+      2 de 3
+    </div>
+    <div class="col">
+      3 de 3
+    </div>
+  </div>
+</div>
 </body>
 </html>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

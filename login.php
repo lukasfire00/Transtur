@@ -2,7 +2,7 @@
 include_once 'conexao.php';
 
 if(isset($_POST['login']) && isset($_POST['senha'])){
-    $email = $_POST['login'];
+    $login = $_POST['login'];
     $senha = $_POST['senha'];
 
     $sql = "select * from usuario WHERE login = '{$login}' AND senha = md5('{$senha}')";
@@ -19,7 +19,7 @@ while($quebrar = mysqli_fetch_array($rs)){
     if($adm == 1){
         header('location: ADM.php');
     }else{
-        header('location: funcionario.php');
+        header('location: index.php');
     }
 }
     }else{

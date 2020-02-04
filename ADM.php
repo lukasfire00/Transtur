@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="estilo.css" type="text/css">
 </head>
 <body>
@@ -23,64 +24,73 @@
                     <a class="nav-link" href="#" style="background-color: #0080FF;" style="color: white;">Home<span class="sr-only">(página atual)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="logar.php" style="background-color: #0080FF;">Login</a>
+                    <a class="nav-link" href="sair.php" style="background-color: #0080FF;">Sair</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: #0080FF;">
                      Serviços
                       </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="index4.html">Pacotes</a>
-                        <a class="dropdown-item" href="#">Monte sua Expedição</a>
+                        <a class="dropdown-item" href="turismo.php">Cadastrar Pacotes</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Excursão</a>git
+                        <a class="dropdown-item" href="#">Cadastrar Excursões</a>
                     </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" href="#" style="background-color: #0080FF;">Fale conosco</a>
                 </li>
             </ul>
-            
+    </div>
+         
+                   </div>
+
         </div>
     </nav>
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="d-block w-100" src="img/tu.jfif" width="1422" height="705" alt="Primeiro Slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="img/gy.jpg" width="1422" height="705" alt="Segundo Slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="img/hy.png" width="1422" height="705" alt="Terceiro Slide">
-            </div>
+    <div class="container">
+  <div class="row">
+    <div class="col-sm">
+    <h2><font color = "#0080FF">Pacotes Cadastrados</h2>
+            <?php
+                include_once 'conexao.php';
+                $sql ="select * from turismo";
+                $resultado = mysqli_query($con,$sql);
+                while($row = mysqli_fetch_array($resultado)){
+
+
+            ?>   
+               <!--colocar html -->
+               <div class="turismo">
+               <h4><?php echo $row["pacote"]; ?></h4>
+               <h5>Valor:<?php echo $row["valor"]; ?></h5>
+               <img src="upload/<?php echo $row["foto"]; ?>"class="imagemtur">
+               <br><br>
+               <?php echo substr($row["descricao"],0,680)."..."; ?>''
+               <P><a href="#">Saiba mais</a></p>
+
+               </div>
+               
+               
+               <?php
+              
+            }  
+            mysqli_close($con);
+
+               ?>
+               </div>
+        <footer id="myFooter">
+        <div class="container">
+            <p class="footer-copyright"> © 2019 Copyright - getbootstrap.com</p>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Anterior</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Próximo</span>
-        </a>
-    </div>
-    <footer class="social-footer">
-  <div class="social-footer-center">
-    <a href="#"><img class="logo" src="https://placehold.it/300x60"></a>
-  </div>
-  <div class="social-footer-icons">
-    <ul class="menu simple">
-      <li><a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-      <li><a href="https://www.instagram.com/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-      <li><a href="https://www.pinterest.com/"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
-      <li><a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-    </ul>
-  </div>
+        <div class="footer-social" style="background-color: yellow;">
+            <a href="#" class="social-icons">
+                <i class="fa fa-facebook"></i></a>
+            <a href="#" class="social-icons">
+                <i class="fa fa-youtube"></i></a>
+            <a href="#" class="social-icons">
+                <i class="fa fa-twitter"></i></a>
+        </div>
+
+    </footer>
 </body>
 </html>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
