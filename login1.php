@@ -9,17 +9,17 @@ if(isset($_POST['login']) && isset($_POST['senha'])){
     $rs = mysqli_query($con,$sql);
     $var = mysqli_num_rows($rs);
 
-    if($var == 1){
+    if($var == 2){
 while($quebrar = mysqli_fetch_array($rs)){
     $adm = $quebrar['adm'];
     
     
     session_start();
 
-    if($adm == 1){
+    if($adm == 2){
         header('location: ADM.php');
     }else{
-        header('location:logar.php');
+        header('location: index.php');
     }
 }
     }else{

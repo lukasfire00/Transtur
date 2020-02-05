@@ -7,8 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-    <link rel="stylesheet" href="estilo.css" type="text/css">
-</head>
+    </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color:#0080FF;">
         <a class="navbar-brand" href="#" style="background-color: white;">

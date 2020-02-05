@@ -7,23 +7,24 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-    <link rel="stylesheet" href="estilo.css" type="text/css">
+    <link rel="stylesheet" href="estilo/estilo.css" type="text/css">
 </head>
-<body style="background-color:#0080FF;">
-<h3>Gerente Login</h3>
+<body style="background-color:#0080FF;" >
+<div class="login"> <h3 class="h3 mb-3 font-weight-normal">Gerente Login</h3>
  <fieldset>
  <legend>:::SISTEMA::::</legend>
  <form action="login.php" method="post">
- Login:
+ <label for="inputlogin" class="sr-only"> Login:</label>
  <input type="text" name="login"
  placeholder="Digite o Login"/>
  <br><br>
- Senha:
+ <label for="inputPassword" class="sr-only"> Senha:</label>
  <input type="text" name="senha"
  placeholder="Digite a Senha"/>
  <BR><BR>
  <input type="submit" value="Entrar no Sistema"/>
  </form>
+</div>
 </body>
 </html>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
