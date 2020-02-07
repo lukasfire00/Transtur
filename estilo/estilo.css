@@ -1,0 +1,80 @@
+.login {
+    width: 25%;
+    min-width: 320px;
+    margin: auto;
+    margin-top: 15%;
+    text-align: center;
+    font-family: arial;
+}
+
+#myFooter {
+    padding-top: 30px;
+}
+
+#myFooter .container {
+    text-align: center;
+}
+
+#myFooter .footer-copyright {
+    margin-bottom: 35px;
+    text-align: center;
+    color: white;
+}
+
+#myFooter ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 18px;
+}
+
+#myFooter li {
+    display: inline-block;
+    margin: 0px 15px;
+    line-height: 2;
+}
+
+#myFooter .footer-social {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.content {
+    flex: 1 0 auto;
+    -webkit-flex: 1 0 auto;
+    min-height: 200px;
+}
+
+#myFooter {
+    flex: 0 0 auto;
+    -webkit-flex: 0 0 auto;
+}
+
+#myFooter .fa-facebook:hover {
+    color: #2b55ff;
+}
+
+#myFooter .fa-facebook:focus {
+    color: #2b55ff;
+}
+
+#myFooter .fa-youtube:hover {
+    color: red;
+}
+
+#myFooter .fa-youtube:focus {
+    color: red;
+}
+
+#myFooter .fa-twitter:hover {
+    color: #00aced;
+}
+
+#myFooter .fa-twitter:focus {
+    color: #00aced;
+}
+
+#conteudo1 {
+    align-items: center;
+    text-align: center;
+}
