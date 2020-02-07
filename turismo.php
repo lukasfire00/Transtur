@@ -29,28 +29,6 @@
             <br>
             <input type="submit" value="Cadastrar"/>
         </form>
-
-
-        <!--<form onsubmit="return valida" name=form>
-
-<label for="inputZip">Pacote:</label>
-<input type="text" class="form-control" name="pacote" required="required">
-
-<label for="inputZip">Valor:</label>
-<input type="text" class="form-control" name="valor" required="required">
-
-<label for="inputZip">Descrição do Pacote:</label>
-<textarea class="form-control" rows="3" name="descricao"></textarea><br>
-
-<label for="inputZip">Foto:</label>
-<input type="file" class="form-control" name="foto" required="required">
-
-
-<button type="button" value="Cadastrar" onclick="valida()" class="btn btn-outline-info"></button>
-</form>-->
-
-
-
         </div>
         <footer id="myFooter" style="align-content: center";>
         <div class="container">
