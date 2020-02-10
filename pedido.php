@@ -32,7 +32,7 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="turismo.php">Cadastrar Pacotes</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="pedido.php">Pedidos</a>
+                        <a class="dropdown-item" href="pedidos.php">Pedidos</a>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -45,23 +45,24 @@
 
         </div>
     </nav>
-    <section class="container" style="background-color:#0080FF;">
+    <section class="container">
     <div class="row">
     
         <?php
                 include_once 'conexao.php';
-                $sql ="select * from turismo";
+                $sql ="select * from pedido";
                 $resultado = mysqli_query($con,$sql);
                 while($row = mysqli_fetch_array($resultado)){
 
 
             ?>   
-            <div class="col-12 col-md-4 " style="color:black">
-               <h4 class="pacote"><?php echo $row["pacote"]; ?></h4>
-               <h5>Valor:<?php echo $row["valor"]; ?></h5>
-               <img src="upload/<?php echo $row["foto"]; ?>"class=" img-fluid">
-               <p><?php echo substr($row["descricao"],0,680)."..."; ?></p>
-               <P><a href="saiba.php">Saiba mais</a></p>
+            <div class="col-12 col-md-4 " style="color:blue;">
+               <h4 class="nome"><?php echo $row["nome"]; ?></h4>
+               <h5>email:<?php echo $row["emai"]; ?></h5>
+               <h5>Lugar onde deseja visitar:<?php echo $row["lugar"]; ?></h5>
+               <h5>Numero de pessoas:<?php echo $row["numero"]; ?></h5>
+               <h5>Hora:<?php echo $row["hora"]; ?></h5>
+               <h5>Necessidade especias:<?php echo $row["necessidade"]; ?></h5>
                 </div>
               <?php
               
@@ -73,7 +74,10 @@
    
           </div>
           </section>
-          <footer id="myFooter" class="fixed-bottom">
+
+
+
+    <footer id="myFooter" class="fixed-bottom">
         <div class="container">
                     </div>
                     <div class="text-center" style=background-color:yellow;>
@@ -86,8 +90,8 @@
         </div>
 
     </footer>
-</body>
-</html>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    </body>
+    </html>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>

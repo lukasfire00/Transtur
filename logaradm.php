@@ -10,33 +10,21 @@
     <link rel="stylesheet" href="estilo/estilo.css" type="text/css">
 </head>
 <body style="background-color:#0080FF;" >
-<div class="login" style="background-color:yellow;"> <img src="img/rt.png" width="100" height="100">
-<h3 class="h3 mb-3 font-weight-normal">Bem Vindo</h3>
-<form action="login1.php" method="post" enctype="multipart/form-data">
+<div class="login"> <h3 class="h3 mb-3 font-weight-normal">Gerente Login</h3>
+ <fieldset>
+ <legend>:::SISTEMA::::</legend>
+ <form action="login.php" method="post">
  <label for="inputlogin" class="sr-only"> Login:</label>
- <input type="text" name="email"
+ <input type="text" name="login"
  placeholder="Digite o Login"/>
  <br><br>
  <label for="inputPassword" class="sr-only"> Senha:</label>
  <input type="text" name="senha"
  placeholder="Digite a Senha"/>
  <BR><BR>
- <input type="submit" value="Entrar"/>
+ <input type="submit" value="Entrar no Sistema"/>
  </form>
 </div>
-<footer id="myFooter" class="fixed-bottom">
-        <div class="container">
-                    </div>
-                    <div class="text-center" style=background-color:yellow;>
-            <a href="#" class="social-icons">
-                <i class="fa fa-facebook"></i></a>
-            <a href="#" class="social-icons">
-                <i class="fa fa-youtube"></i></a>
-            <a href="#" class="social-icons">
-                <i class="fa fa-twitter"></i></a>
-        </div>
-
-    </footer>
 </body>
 </html>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

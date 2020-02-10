@@ -1,31 +1,25 @@
-<?php 
+<?php
+//abrir a sessao
+session_start();
+$email = $_POST["email"];
+$senha = $_POST["senha"];
+//montar a instrução de verificar se o usuario existe
+$sql = "select * from cliente WHERE email ='".$email."' AND senha = '".$senha."'";
+//abrir conexão com o banco
 include_once 'conexao.php';
+//executar a intrução no banco
+$rs = mysqli_query($con,$sql);
+if(mysqli_num_rows($rs) == 1){
 
-if(isset($_POST['login']) && isset($_POST['senha'])){
-    $login = $_POST['login'];
-    $senha = $_POST['senha'];
-
-    $sql = "select * from usuario WHERE login = '{$login}' AND senha = md5('{$senha}')";
-    $rs = mysqli_query($con,$sql);
-    $var = mysqli_num_rows($rs);
-
-    if($var == 2){
-while($quebrar = mysqli_fetch_array($rs)){
-    $adm = $quebrar['adm'];
-    
-    
-    session_start();
-
-    if($adm == 2){
-        header('location: ADM.php');
-    }else{
-        header('location: index.php');
-    }
+      //echo"Encontrei!....";
+        echo"<script>";    
+        echo"location.href='faça.php'";
+        echo"</script>";
+}else{
+      echo"Nenhum registro encontrado";
 }
-    }else{
-         echo "O e-mail ou senha estão incorretos!";
-}
-}
+// fechar conexão com o banco
+mysqli_close($con);   
+
 
 ?>
-

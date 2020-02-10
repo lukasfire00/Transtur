@@ -7,9 +7,10 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-    </head>
+    <link rel="stylesheet" href="estilo/estilo.css" type="text/css">
+</head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color:#0080FF;">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color:#0080FF;">
         <a class="navbar-brand" href="#" style="background-color: white;">
             <img src="img/rt.png" width="100" height="100"></a>
 
@@ -20,19 +21,19 @@
         <div class="collapse navbar-collapse" id="conteudoNavbarSuportado" style="background-color:#0080FF;">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="ADM.php" style="background-color: #0080FF;" style="color: white;">Home<span class="sr-only">(página atual)</span></a>
+                    <a class="nav-link" href="index.php" style="background-color: #0080FF;" style="color: white;">Home<span class="sr-only">(página atual)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="sair.php" style="background-color: #0080FF;">Sair</a>
+                    <a class="nav-link" href="logar.php" style="background-color: #0080FF;">Logar</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: #0080FF;">
                      Serviços
                       </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="turismo.php">Cadastrar Pacotes</a>
+                        <a class="dropdown-item" href="saiba.php">Pacotes</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="pedido.php">Pedidos</a>
+                        <a class="dropdown-item" href="faça.php">Monte seu pedido</a>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -45,35 +46,29 @@
 
         </div>
     </nav>
-    <section class="container" style="background-color:#0080FF;">
-    <div class="row">
-    
-        <?php
-                include_once 'conexao.php';
-                $sql ="select * from turismo";
-                $resultado = mysqli_query($con,$sql);
-                while($row = mysqli_fetch_array($resultado)){
-
-
-            ?>   
-            <div class="col-12 col-md-4 " style="color:black">
-               <h4 class="pacote"><?php echo $row["pacote"]; ?></h4>
-               <h5>Valor:<?php echo $row["valor"]; ?></h5>
-               <img src="upload/<?php echo $row["foto"]; ?>"class=" img-fluid">
-               <p><?php echo substr($row["descricao"],0,680)."..."; ?></p>
-               <P><a href="saiba.php">Saiba mais</a></p>
-                </div>
-              <?php
-              
-            }  
-            mysqli_close($con);
-
-               ?>
-        
-   
-          </div>
-          </section>
-          <footer id="myFooter" class="fixed-bottom">
+    <h1>Monte sua experiencia.</h1>
+  <form action="gravar1.php" method="post" enctype="multipart/form-data" style="background-color:yellow;" >
+            Nome:<br>
+            <input type="text" name="nome" required="required"/>
+            <br>
+            Email:<br>
+            <input type="text" name="email" required="required"/>
+            <br>
+            Lugar onde deseja visitar:<br>
+            <input type="text" name="lugar" required="required"/>
+            <br>
+            Numero de pessoas:<br>
+            <input type="text" name="numero" required="required"/>
+            <br>
+            Horario:<br>
+            <input type="text" name="hora" required="required"/>
+            <br>
+            Necessidade especiais:<br>
+            <input type="text" name="necessidade" required="required"/>
+            <br><br>
+            <input type="submit" value="Cadastrar"/></form>
+ 
+  <footer id="myFooter" class="fixed-bottom">
         <div class="container">
                     </div>
                     <div class="text-center" style=background-color:yellow;>
@@ -86,8 +81,8 @@
         </div>
 
     </footer>
-</body>
-</html>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    </body>
+    </html>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>

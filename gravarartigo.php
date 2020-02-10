@@ -30,7 +30,7 @@
  
  if($ext != "jpg" && $ext != "jpeg" && $ext != "png" && $ext != "gif"){
      echo"Arquivo Invalido!";
- }elseif($foto["size"] > 1024 * 800){
+ }elseif($foto["size"] > 1024 * 900){
      echo"Tamanho excedido!";
  }else{
           // gravar no banco ... fazer a logica de gravar.

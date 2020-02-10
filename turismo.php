@@ -29,11 +29,11 @@
             <input type="submit" value="Cadastrar"/></form>
 
         </div>
-        <footer id="myFooter">
+        <footer id="myFooter" class="fixed-bottom">
         <div class="container">
-            <p class="footer-copyright"> © 2019 Copyright - getbootstrap.com</p>
+            
         </div>
-        <div class="footer-social" style="background-color: yellow;">
+        <div class="text-center" style="background-color: yellow;">
             <a href="#" class="social-icons">
                 <i class="fa fa-facebook"></i></a>
             <a href="#" class="social-icons">
