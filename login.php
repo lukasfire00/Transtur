@@ -17,7 +17,7 @@ while($quebrar = mysqli_fetch_array($rs)){
     session_start();
 
     if($adm == 1){
-        header('location: ADM.php');
+        header('location: adm.php');
     }else{
         header('location:logar.php');
     }

@@ -21,7 +21,7 @@
         <div class="collapse navbar-collapse" id="conteudoNavbarSuportado" style="background-color:#0080FF;">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#" style="background-color: #0080FF;" style="color: white;">Home<span class="sr-only">(página atual)</span></a>
+                    <a class="nav-link" href="index.php" style="background-color: #0080FF;" style="color: white;">Home<span class="sr-only">(página atual)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="logar.php" style="background-color: #0080FF;">Logar</a>
